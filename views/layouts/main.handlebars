@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<title>Essence Scraper</title>
+		<title>Vogue Scraper</title>
 </head>
 
 <body>
 	<header>
-		<a href="/"><div id="sitename">Essence Scraper</div></a>
+		<a href="/"><div id="sitename">Vogue Scraper</div></a>
 		<a href="/"><button id="all-articles">All Articles</button></a>
 		<a href="/saved"><button id="saved-articles">Saved Articles</button></a>
 		<form action="/scrape" method="GET">
@@ -20,12 +20,12 @@
 			<input type="text" name="search" placeholder="Search for articles" id="search-input">
 		</form>
 	</header>
-	<img id="cover" src="/public/images/fashion.jpg" height="500px">
+	<img id="cover" src="images/vogue.jpg" height="700px">
 	<div id="container">
 		{{{ body }}}
 	</div>
 	
-	<script src="/public/js/fashion.js"></script>
+	<script src="fashion.js"></script>
 
 	<div id="addnote">
 		<div id="note-displayer">
@@ -43,6 +43,6 @@
 	</div>
 	
 	<footer>© Copyright Zhane Warner Duncan 2019</footer>
-	<script src="/public/js/fashion.js"></script>
+	<script src="fashion.js"></script>
 </body>
 </html>
