@@ -1,4 +1,4 @@
-//Dependencies
+// Dependencies
 
 var express = require("express");
 var method = require("method-override");
@@ -7,7 +7,8 @@ var exphbs = require("express-handlebars");
 var mongoose = require("mongoose");
 var logger = require("morgan");
 var cheerio = require("cheerio");
-var request = require("request");
+// var request = require("request");
+var axios = require("axios");
 
 // Mongoose
 
@@ -64,32 +65,38 @@ app.get("/", function(req, res) {
 });
 
 app.get("/scrape", function(req, res) {
-	request("https://www.essence/fashion/", function(error, response, html) {
-		var $ = cheerio.load(html);
+	axios.get("https://fashionweekdaily.com/").then (function(response) {
+		var $ = cheerio.load(response.data);
+		// console.log("Im here")
 		var result = {};
-		$("essence-topic").each(function(i, element) {
+		$(".list-post").each(function(i, element) {
+			// console.log("please work")
 			var link = $(element).find("a").attr("href");
-			var title = $(element).find("essence-topic_content").text().trim();
-			var summary = $(element).find("main-content").text().trim();
-			var img = $(element).parent().find("essence-topic__featured-image icon-article").find("img").attr("src");
+			var title = $(element).find("a").attr("title");
+			var summary = $(element).find(".item-content.entry-content").text().trim();
+			// var time = $(element).parent().find(".grid-post-box-meta").text().trim();
 			result.link = link;
 			result.title = title;
 			if (summary) {
 				result.summary = summary;
 			};
-			if (img) {
-				result.img = img;
-			}
-			else {
-				result.img = $(element).find("lazy animated fadeIn").find("img").attr("src");
-			};
+			// if (time) {
+			// 	result.time = time;
+			// }
+			// else {
+			// 	result.img = $(element).find(".penci-image-holder").find("img").attr("src");
+			// };
+			// console.log("not found");
+			console.log(result);
 			var entry = new Article(result);
 			Article.find({title: result.title}, function(err, data) {
+				if (err) throw err;
 				if (data.length === 0) {
+					console.log("not found");
 					entry.save(function(err, data) {
 						if (err) throw err;
 					});
-				}
+				}else console.log("found");
 			});
 		});
 		console.log("Scrape finished.");

@@ -93,13 +93,13 @@ header button {
 .story-body {
 	margin: auto;
 	width: 95%;
-	min-height: 200px;
-	box-shadow: 0 0 10px #aaa;
+	min-height: 100px;
+	box-shadow: 0 0 10px rgb(80, 80, 80);
 	background-color: #fff;
 }
 
 .story-body h2 {
-	background-color: #fc3e3e;
+	background-color: #070707;
 }
 
 .story-body a {
@@ -113,14 +113,14 @@ header button {
 .story-body button {
 	display: inline;
 	min-width: 128px;
-	background-color: #77b9fd;
-	color: #fff;
+	background-color: black;
+	color:white;
 	font-weight: bold;
 	font-size: 22px;
 }
 
 .story-body button:hover {
-	background-color: #aed4fb;
+	background-color: #fbaeae;
 	box-shadow: 0 0 10px #fff;
 }
 
@@ -170,7 +170,7 @@ header button {
 }
 
 #note-displayer h2 {
-	background-color: #3181d3;
+	background-color: #050505;
 	color: #fff;
 	padding: 0 20px;
 	margin: 0;
@@ -179,8 +179,8 @@ header button {
 #note-displayer h3 {
 	padding: 0 20px;
 	margin: 0;
-	background-color: #93d2f7;
-	color: #3181d3;
+	background-color: #373b3d;
+	color: #d4d6d8;
 }
 
 #note-displayer label {
@@ -191,7 +191,7 @@ header button {
 
 #note-displayer button {
 	min-width: 128px;
-	background-color: #77b9fd;
+	background-color: #080808;
 	color: #fff;
 	font-weight: bold;
 	font-size: 20px;
@@ -200,7 +200,7 @@ header button {
 }
 
 #note-displayer button:hover {
-	background-color: #aed4fb;
+	background-color: #fbaeae;
 	box-shadow: 0 0 10px #fff;
 }
 
@@ -231,7 +231,7 @@ footer {
 	background-color: black;
 	color: #ddd;
 	font-size: 15px;
-	border-top: 8px solid #3e9cfc;
+	border-top: 8px solid #f38a8a;
 	opacity: 0.7;
 	z-index: 3;
 }
