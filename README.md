@@ -1,4 +1,5 @@
-# Scrape
+# Scrape 
+Try it here https://still-earth-18704.herokuapp.com/
 
 All the News That's Fit to Scrape is an application that lets users scrape news articles from fashionweekdaily.com. Users can then view and leave comments on saved articles. This app uses Cheerio to scrape news from fashion week daily and stores them in MongoDB using Mongoose. 
 
