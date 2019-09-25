@@ -15,12 +15,16 @@ Make sure to install express, express-handlebars, mongoose, cheerio, axios.
 
 * How to install
 
-1. Type "npm i" for all packages in oyur terminal
+1. Type "npm i" for all packages in your terminal
 2. Run this command in your Terminal/Bash window: heroku addons:create mongolab
+
 • This command will add the free mLab provision to your project.
 
 ## Demo
 Try it here https://still-earth-18704.herokuapp.com/
+![scrape](https://user-images.githubusercontent.com/49568886/65647968-67d85a80-dfce-11e9-9c58-226d0424c35e.PNG)
+
+![scrape2](https://user-images.githubusercontent.com/49568886/65647971-69098780-dfce-11e9-90fb-28adfec1f417.PNG)
 
 ## Built With
 * Javascript
